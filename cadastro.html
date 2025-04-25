@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    form{
+        display: flex;
+        align-self: center;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    header > h1{
+        align-self: center;
+        padding: 10px;
+        color: rgb(236, 236, 236);
+        text-shadow: 1px 1px 1px black;
+    }
+    #email{
+        border-radius: 5px 5px 0px 0px;
+    }
+    #senha{
+        border-radius: 0px 0px 5px 5px;
+    }
+    .label{
+        background-color: lightgray;
+        padding: 13px;
+        font-size: large;
+        text-shadow: 0px 0px 1px black;
+    }
+    .digite{
+        background-color: white;
+        border-radius: 4px;
+        border-style: none;
+        padding: 10px;
+        width: 220px;
+        box-shadow: 0px 0px 2px black;
+    }
+    .label:hover{
+        cursor: pointer;
+        text-shadow: 0px 0px 1px white;
+    }
+    #enviar{
+        border: solid 1px black;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: blue;
+        color: white;
+        font-size: large;
+        text-shadow: 0px 0px 1px white;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px black;
+    }
+    #enviar:hover{
+        background-color: rgb(68, 68, 240);
+    }
+     #esqueceu{
+        color: blue;
+        align-self: center;
+        text-decoration: none;
+        margin-top: 15px;
+        font-size: larger;
+        text-shadow: 0px 0px 1px black;
+    }   
+    #esqueceu:hover{
+        text-shadow: 0px 0px 0.1px rgba(255, 255, 255, 0.349);
+    }
+    #form2{
+        align-self: center;
+        display: flex
+    }
+    #favorita{
+        text-align: center;
+        background-color: rgb(26, 168, 216);
+    }
+    #lista{
+        padding: 7px;
+        text-align: center;
+    }
+    #list{
+        align-self: center;
+        font-size: larger;
+        text-shadow: 0px 0px 1px black;
+        background-color: lightgrey;
+        padding: 13px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    #list:hover{
+        text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.479);
+    }
+    #range{
+        align-self: center;
+    }
+    #quanto{
+        align-self: center;
+        text-shadow: 0px 0px 1px black;
+        font-size: larger;
+        margin-top: 15px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Um pequeno exemplo</h1>
+    </header>
+    <form method="post" action="">
+        <label class="label" for="mail" id="email">Email:
+            <input autocomplete="email" required class="digite" id="mail" placeholder="digite seu email" type="email">
+        </label>
+
+        <label for="senh" class="label" id="senha">Senha: 
+            <input class="digite" id="senh" placeholder="digite sua senha" required minlength="5" type="password">
+        </label>
+        
+        <input id="enviar" type="submit" value="Enviar">
+        <a id="esqueceu" href="">Esqueceu sua senha?</a>
+    </form>
+    <form action="" id="form2">
+        <h1 id="favorita">Escolha sua linguagem favorita ou digite</h1>
+
+    <label id="list" for="lista">Linguagem favorita:
+    <input id="lista" list="linguagens" placeholder="digite ou escolha">
+    </label>
+        <datalist id="linguagens">
+            <option value="Java"></option>
+            <option value="Javascript"></option>
+            <option value="Python"></option>
+            <option value="php"></option>
+            <option value="c#"></option>
+        </datalist>
+        <p id="quanto">De 0 a 10, quanto você gosta dessa linguagem?
+        <input id="range" type="range" min="0" max="10" value="10" oninput="contagem.innerHTML = Number(range.value)">
+        <output id="contagem">10</output>
+        </p>
+    </form>
+</body>
+</html>
