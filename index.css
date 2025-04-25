@@ -1,6 +1,94 @@
 @charset "UTF-8";
+@media screen and (max-width: 769px){
+    
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(67, 175, 211);
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: rgb(26, 168, 216);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header > nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#titulolink{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.menu{
+    text-align: center;
+    width: 98.5vw;
+    color: black;
+    text-decoration: none;
+    padding: 3px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: larger;
+    margin: 5px 0px;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: 72vh;
+}
+main > p{
+    background-color: rgb(209, 217, 219);
+    align-self: center;
+    padding: 10px;
+    font-size: larger;
+    text-align: justify;
+    max-width: 950px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.445);
 
-
+}
+#adaptavel{
+    background-color: rgba(255, 255, 0, 0.616);
+    text-align: center;
+}
+.config{
+    color: white;
+}
+footer{
+    display: flex;
+    box-shadow: 0px 0px 2px black;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    margin-top: auto;
+}
+footer > p{
+    align-self: center;
+    padding: 5px;
+}
+iframe{
+    align-self: center;
+}
+#obrigado{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+#favorita{
+    width: 100em;
+    color: rgb(236, 236, 236);
+    text-shadow: 1px 1px 1px black;
+    padding: 10px;
+}
+}
 @media screen and (min-width: 770px) {
     
 *{
